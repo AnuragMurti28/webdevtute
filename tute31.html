@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More on Selectors </title>
+</head>
+<style>
+    h1 {
+        background-color: olive;
+        color: white;
+        text-align: center;
+        font-weight: bold;
+    }
+    
+    div li p {
+        color: white;
+        background-color: green;
+    }
+    
+    div p {
+        /*this address the p inside anywhere of div*/
+        color: white;
+        background-color: rgb(133, 32, 25);
+    }
+    
+    div>p {
+        /* div>p shows addressing direct child of <div> it applies only when <p> is direct inside <div>*/
+        color: white;
+        background-color: rgb(61, 158, 182);
+    }
+    
+    div+p {
+        /* this adddress the element which is first sibling to <p>*/
+        color: white;
+        background-color: rgb(176, 61, 182);
+    }
+</style>
+
+<body>
+    <h1>Let us learn more about Selectors</h1>
+    <div class="container">
+        <div class="row">
+            <ul>
+                <li class="item">
+                    <p>This is another paragraph inside div and li</p>
+                </li>
+                <!-- <li class="item"></li>
+                <li class="item"></li>
+                <li class="item"></li> -->
+                <p>This para is inside &ltul&gt tag</p>
+            </ul>
+            <p>This paragraph is direct child of &ltdiv&gt addressed by div > p{}</p>
+
+        </div>
+        <p>This is another paragraph direct child of &ltdiv&gt and sibling to &ltdiv&gt </p>
+    </div>
+
+    <p>This is outermost paragraph. it is also sibling to &ltdiv&gt addressed by div + p{}</p>
+</body>
+
+</html>

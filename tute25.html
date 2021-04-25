@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tute25 CSS Position</title>
+    <meta name="title" content="This is the first html tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is html tutorial">
+    <meta name="keyword" content="html, html tutorials, web developement">
+    <meta name="robot-" content="NOINDEX, NOFOLLOW">
+    <!-- this is how we add external stylesheet -->
+    <!-- this is how we add external javascript-->
+    <script src="index.js"></script>
+    <!-- <link rel="stylesheet" href="index.css "> -->
+
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    
+    body,
+    .parallax {
+        /* The image used */
+        background-image: url("https://source.unsplash.com/user/erondu/720x540");
+        /* Full height */
+        height: 100%;
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: repeat;
+        background-size: cover;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+    
+    h1 {
+        padding: 5px;
+        text-align: center;
+        background-color: darkcyan;
+        color: whitesmoke;
+        display: inline-block;
+    }
+    
+    h2,
+    h3,
+    h6 {
+        padding: 5px;
+        text-align: center;
+        background-color: rgb(66, 182, 95);
+        color: whitesmoke;
+        display: inline-block;
+        text-align: center;
+        box-sizing: border-box;
+    }
+    
+    .box {
+        display: inline-block;
+        border: 2px solid #801230;
+        width: 150px;
+        height: 150px;
+        margin: 2px;
+        padding: 2px;
+    }
+    
+    .container {
+        border: 2px solid black;
+        background-color: #bb9f3a;
+        display: block;
+        height: 4000px;
+    }
+    
+    #box3 {
+        /* In Position: absolute, content moves with respect to first parent */
+        position: absolute;
+        top: 34px;
+        bottom: 34px;
+    }
+    
+    #box4 {
+        /*Position : fixed makes the box relative to it,s browser window fixed when we scroll the page it does not moves from its position*/
+        position: fixed;
+        right: 4px;
+        bottom: 2px;
+    }
+    
+    #box1 {
+        position: sticky;
+    }
+    
+    #box2 {
+        /*relative, content moves with respect to it's own normal position,*/
+        position: relative;
+        top: 5px;
+        bottom: 10px;
+    }
+    
+    p {
+        display: block;
+        background-color: rgb(118, 109, 109);
+    }
+</style>
+
+<body>
+    <div class="parallax">
+
+        <!-- <div class="notes"> -->
+        <h2>This is tutorial of CSS Position</h2>
+        <!-- <p>
+            Different types of positions are : static(by default), absolute, relative, fixed, sticky. <br> In Position: absolute, content moves with respect to first parent . <br> In position: relative, content moves with respect to it's own normal position,
+            and leave a gap at it's normal position. . <br>
+            Position : fixed makes the box relative to it,s browser window fixed when we scroll the page it does not moves from its position
+        </p> -->
+
+        <!-- </div> -->
+
+        <div class="container" id="features">
+
+            <div class="box" id="box1">1</div>
+            <div class="box" id="box2">2</div>
+            <div class="box" id="box3">3</div>
+            <div class="box" id="box4">4 chat with us</div>
+        </div>
+
+    </div>
+</body>
+
+</html>
