@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nth Child pseudo selector</title>
+</head>
+<style>
+    .container {
+        display: block;
+        width: 233px;
+        margin: auto;
+    }
+    
+    input {
+        display: block;
+    }
+    
+    input[type=text] {
+        padding: 23px;
+        border: 2px solid red;
+    }
+    
+    a[target] {
+        background-color: rgb(211, 144, 81);
+        color: white;
+    }
+    
+    input[type="email"] {
+        color: aqua;
+    }
+    
+    a[target='_self'] {
+        background-color: rgb(228, 83, 83);
+        color: white;
+    }
+    
+    a[target]:hover {
+        color: rgb(50, 182, 53);
+    }
+    /*this li:nth-child(2n+0) will target every(2n+0)th child in li*/
+    
+    li:nth-child(2n+0) {
+        color: rgb(226, 43, 43);
+    }
+    /*this  li:nth-child(odd) {} will target every odd li*/
+    
+    li:nth-child(odd) {
+        color: rgb(43, 226, 73);
+    }
+    /*this will apply CSS on third child*/
+    
+    li:nth-child(3) {
+        color: blueviolet;
+    }
+    
+    li:nth-child(even) {
+        background-color: rgb(22, 3, 39);
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+
+    <div class="container">
+        <h1><a href="http://google.com" target="_blank">Google</a></h1>
+        <h1><a href="http://facebook.com" target="_self">Facebook</a></h1>
+        <form action="" class="form-control">
+            <input type="text" name="" id="" placeholder="Enter your name">
+            <input type="password" name="" id="" placeholder="enter your password">
+            <input type="email" name="" id="" placeholder="enter your E-mail">
+            <input type="submit" value="submit">
+
+        </form>
+        <ul>
+            <li class="item" id="item-1">item1: /*this li:nth-child(odd) {} will target every odd li*/</li>
+            <li class="item" id="item-2">item2 /*this li:nth-child(2n+0) will target every(2n+0)th child in li*/</li>
+            <li class="item" id="item-3">item3 in the brackets we can directly mention numbers also to target that child.<br> li:nth-child(3) { color: blueviolet; }
+            </li>
+            <li class="item" id="item-4">item4:/*this li:nth-child(even) {} will target every even li*/ <br> li:nth-child(even) { background-color: rgb(22, 3, 39); }
+            </li>
+            <li class="item" id="item-5">item5</li>
+            <li class="item" id="item-6">item6</li>
+            <li class="item" id="item-7">item7</li>
+            <li class="item" id="item-8">item8</li>
+            <li class="item" id="item-9">item9</li>
+            <li class="item" id="item-10">item10</li>
+        </ul>
+        <p>We can set the properties using pseudo-selectors. <br>By targetting or selecting the attributes of any element. <br> & a[target='_self'] { background-color: rgb(228, 83, 83); color: white; }&
+        </p>
+    </div>
+</body>
+
+</html>
