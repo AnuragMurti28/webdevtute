@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Transform</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .home-button {
+        color: white;
+        text-decoration: none;
+    }
+    
+    header:hover {
+        box-shadow: 0px 0px rgb(60, 63, 63);
+    }
+    
+    header {
+        display: inline-flex;
+        margin: 5px 5px;
+        padding: 2px 2px;
+        background-color: darkcyan;
+        box-shadow: -2px -2px rgb(60, 63, 63);
+    }
+    
+    .container {
+        background-color: antiquewhite;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(21, 151, 123);
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 400px;
+        height: 400px;
+        overflow-y: scroll;
+        transform: rotate(60deg);
+        transition: all 1s ease-in-out;
+    }
+    
+    .container2 {
+        background-color: rgb(195, 223, 205);
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .box2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(17, 121, 135);
+        border: 2px solid black;
+        border-radius: 8px;
+        width: 400px;
+        height: 400px;
+        overflow-y: auto;
+        transition: all 1s ease-in-out;
+    }
+    
+    .box2:hover {
+        transform: translate(100px, 100px);
+        /**
+            transform: translate(100px);
+        */
+    }
+    
+    details:hover {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+    <div class="container">
+        <div class="box1">
+            <details>
+                <summary>Click on arrow to view notes</summary>
+
+                <h2>Box1</h2>
+                <ul>
+                    <li>Using transform directly into .box1{} CSS Class</li>
+                </ul>
+
+            </details>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="box2">
+            <details>
+
+                <h2>Box2</h2>
+
+
+
+                <ul>
+                    <li>using transform and transition in box2:hover{}</li>
+
+                </ul>
+            </details>
+        </div>
+    </div>
+</body>
+<!--  -->
+<!--  -->
+
+</html>

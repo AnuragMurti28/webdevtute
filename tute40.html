@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid tutorial</title>
+</head>
+<style>
+    .container1 {
+        display: grid;
+        grid-template-columns: 300px 100px 100px;
+        border: 2px solid green;
+        margin: 4px;
+    }
+    
+    .item1 {
+        background-color: rgb(82, 187, 206);
+        border: 2px solid black;
+        margin: 2px;
+        color: white;
+    }
+    
+    .container2 {
+        display: grid;
+        grid-template-columns: 300px auto 100px;
+        border: 2px solid green;
+        margin: 4px;
+    }
+    
+    .item2 {
+        background-color: rgb(82, 187, 206);
+        border: 2px solid black;
+        margin: 2px;
+        color: white;
+    }
+    
+    .container3 {
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        border: 2px solid green;
+        margin: 4px;
+    }
+    
+    .item3 {
+        background-color: rgb(82, 206, 148);
+        border: 2px solid black;
+        margin: 2px;
+        color: white;
+    }
+    
+    .container4 {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        border: 2px solid green;
+        margin: 4px;
+        grid-gap: 2rem;
+    }
+    
+    .item4 {
+        background-color: rgb(196, 202, 69);
+        border: 2px solid black;
+        padding: 15px 5px;
+        color: white;
+    }
+    
+    .important {
+        font-weight: bolder;
+        color: chartreuse;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+    <div class="container1">
+
+        <div class="item1 important">grid-template-columns: 300px 100px 100px</div>
+        <div class="item1">This is item-2</div>
+        <div class="item1">This is item-3</div>
+        <div class="item1">This is item-4</div>
+        <div class="item1">This is item-5</div>
+        <div class="item1">This is item-6</div>
+        <div class="item1">This is item-7</div>
+        <div class="item1">This is item-8</div>
+        <div class="item1">This is item-9</div>
+    </div>
+    <div class="container2">
+
+        <div class="item2 important">grid-template-columns:300px auto 100px</div>
+        <div class="item2">This is item-2</div>
+        <div class="item2">This is item-3</div>
+        <div class="item2">This is item-4</div>
+        <div class="item2">This is item-5</div>
+        <div class="item2">This is item-6</div>
+        <div class="item2">This is item-7</div>
+        <div class="item2">This is item-8</div>
+        <div class="item2">This is item-9</div>
+    </div>
+    <div class="container3">
+
+        <div class="item3 important">grid-template-columns:1fr 3fr 1fr</div>
+        <div class="item3">This is item-2</div>
+        <div class="item3">This is item-3</div>
+        <div class="item3">This is item-4</div>
+        <div class="item3">This is item-5</div>
+        <div class="item3">This is item-6</div>
+        <div class="item3">This is item-7</div>
+        <div class="item3">This is item-8</div>
+        <div class="item3">This is item-9</div>
+    </div>
+    <div class="container4">
+
+        <div class="item4 important">grid-template-columns: repeat(3, auto);</div>
+        <div class="item4 important">grid-gap: 2rem;</div>
+        <div class="item4 important">padding: 15px 5px; between item</div>
+        <div class="item4">This is item-4</div>
+        <div class="item4">This is item-5</div>
+        <div class="item4">This is item-6</div>
+        <div class="item4">This is item-7</div>
+        <div class="item4">This is item-8</div>
+        <div class="item4">This is item-9</div>
+
+    </div>
+
+</body>
+
+</html>

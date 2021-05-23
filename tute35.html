@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables and custom Properties</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<style>
+     :root {
+        --primary-color: rgb(204, 192, 103);
+        --danger-color: rgb(255, 0, 0);
+        --maxw: 433px;
+    }
+    
+    * {
+        font-family: 'Oswald', sans-serif;
+        font-weight: 400;
+        box-sizing: border-box;
+    }
+    
+    .box {
+        display: flex;
+        flex-flow: row wrap;
+        --box-color: rgb(20, 140, 148);
+        width: 200px;
+        height: auto;
+        background-color: var(--box-color);
+        box-shadow: 4px 4px 8px var(--box-color);
+        color: white;
+        border: 2px solid var(--danger-color);
+        padding: 10px 10px;
+        margin: 5px 5px;
+        align-items: center;
+    }
+    
+    .container {
+        max-width: var(--maxw);
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--primary-color);
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+    <div class="container">
+        <div class="box">
+
+            <p>We can create custom variable properties using (--) as prefix in variables name e.g. "--box-color: rgb(51, 109, 51);"<br> using custom defined variable as background-color: var(--box-color).<br> scope of that custom variable is limited within
+                the element in which it is defined.<br>We can create custom variable for whole document by defining root in style <br> :root{ /*attributes */} </p>
+
+
+        </div>
+        <div class="box">
+
+            <p>We can create custom variable properties using (--) as prefix in variables name e.g. "--box-color: rgb(51, 109, 51);"<br> using custom defined variable as background-color: var(--box-color).<br> scope of that custom variable is limited within
+                the element in which it is defined.<br>We can create custom variable for whole document by defining root in style <br> :root{ /*attributes */} </p>
+
+
+        </div>
+        <div class="box">
+
+            <p>We can create custom variable properties using (--) as prefix in variables name e.g. "--box-color: rgb(51, 109, 51);"<br> using custom defined variable as background-color: var(--box-color).<br> scope of that custom variable is limited within
+                the element in which it is defined.<br>We can create custom variable for whole document by defining root in style <br> :root{ /*attributes */} </p>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

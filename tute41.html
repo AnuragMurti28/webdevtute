@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Rows</title>
+</head>
+<style>
+    .grid1 {
+        display: grid;
+        grid-template-rows: 1fr 1fr 4fr;
+        grid-auto-rows: 2fr;
+        grid-template-columns: 1fr 4fr 2fr;
+        grid-gap: 1rem;
+    }
+    
+    .box1 {
+        background-color: rgb(191, 59, 83);
+        border: 2px solid green;
+        color: white;
+        margin: 2px;
+    }
+    
+    .grid2 {
+        display: grid;
+        grid-template-rows: 1fr 1fr 4fr;
+        grid-auto-rows: 2fr;
+        grid-template-columns: repeat(9, 2fr);
+        grid-gap: 1rem;
+    }
+    
+    .box2 {
+        background-color: rgb(59, 178, 191);
+        border: 2px solid green;
+        color: white;
+        margin: 2px;
+    }
+    
+    .important {
+        color: aqua;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+    <div class="grid1">
+        <div class="box1 important">grid-template-rows: 1fr 1fr 4fr; 1fr</div>
+        <div class="box1 important">grid-template-rows: 1fr 1fr 4fr; 1fr</div>
+        <div class="box1 important">grid-template-rows: 1fr 1fr 4fr; 4fr</div>
+        <div class="box1 important">grid-auto-rows: 2fr; 2fr</div>
+        <div class="box1 important">grid-template-columns: 1fr 4fr 2fr;</div>
+        <div class="box1 important">grid-gap: 1rem;</div>
+        <div class="box1">This is box-7</div>
+        <div class="box1">This is box-8</div>
+        <div class="box1">This is box-9</div>
+        <div class="box1">This is box-10</div>
+    </div>
+    <div class="grid2">
+        <div class="box2 important">grid-template-rows: 1fr 1fr 4fr; 1fr</div>
+        <div class="box2 important">grid-template-rows: 1fr 1fr 4fr; 1fr</div>
+        <div class="box2 important">grid-template-rows: 1fr 1fr 4fr; 4fr</div>
+        <div class="box2 important">grid-auto-rows: 2fr; 2fr</div>
+        <div class="box2 important">grid-template-columns: repeat(9, 2fr);</div>
+        <div class="box2 important">grid-gap: 1rem;</div>
+        <div class="box2">This is box-7</div>
+        <div class="box2">This is box-8</div>
+        <div class="box2">This is box-9</div>
+        <div class="box2">This is box-10</div>
+    </div>
+</body>
+
+</html>
