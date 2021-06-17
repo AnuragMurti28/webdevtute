@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Math Object</title>
+</head>
+<!-- style tag -->
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'main main main main''div div div div''code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(31, 117, 143);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: main;
+        grid-gap: 10px;
+        background-color: rgb(213, 71, 71);
+        padding: 10px;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    #main li {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 10px;
+        margin: 2px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .outputimage {
+        height: auto;
+        width: 700px;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+    #btn {
+        padding: 10px;
+        background-color: rgb(228, 134, 33);
+        border: 4px 4px groove rgba(141, 115, 10, 0.994);
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+    }
+</style>
+
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav id="nav" class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial | Math Object</h1>
+            </div>
+        </div>
+        <div id="main" class="container">
+
+        </div>
+        <section class="code">
+            <h3>INPUTS</h3>
+
+            <br>let m = Math;
+            <br>console.log(m);
+            <br>
+            <br>// Printing the constant from Math object
+            <br>console.log("The value of Math.E is", Math.E);
+            <br>console.log("The value of Math.LN2 is", Math.LN2);
+            <br>console.log("The value of Math.LN10 is", Math.LN10);
+            <br>console.log("The value of Math.LOG2E is", Math.LOG2E);
+            <br>console.log("The value of Math.LOG10E is", Math.LOG10E);
+            <br>console.log("The value of Math.PI is", Math.PI);
+            <br>console.log("The value of Math.SQRT1_2 is", Math.SQRT1_2);
+            <br>console.log("The value of Math.SQRT2 is", Math.SQRT2);
+            <br>
+            <br>// Printing the Functions from Math Object
+            <br>let a = 34.65434;
+            <br>let b = 49;
+            <br>
+            <br>console.log("The value of a and b is", a, b);
+            <br>console.log("The value of a and b rounded is ", Math.round(a), Math.round(b));
+            <br>console.log("3 raised to the power 2 is ", Math.pow(3, 2));
+            <br>console.log("square root of " + b + " is ", Math.sqrt(b));
+            <br>console.log("square root of '50' is ", Math.sqrt(50));
+            <br>console.log("Math.ceil() gives the rounded up to nearest integer value " + a + " ", Math.ceil(a));
+            <br>console.log("Math.floor() gives the rounded down to nearest integer value " + a + " ", Math.floor(a));
+            <br>
+            <br>console.log("Math.abs() gives absolute value of number ", Math.abs(-5.66));
+            <br>console.log("Math.abs() gives absolute value of number ", Math.abs(5.66));
+            <br>
+            <br>// Trignometric Functions
+            <br>console.log("The value of sin(PI/2) is ", Math.sin(Math.PI / 2));
+            <br>console.log("The value of cos(PI/2) is ", Math.cos(Math.PI / 2));
+            <br>console.log("The value of tan(PI/2) is ", Math.tan(Math.PI / 2));
+            <br>
+            <br>// min and max function
+            <br>
+            <br>console.log("Minimum value of numbers 6, 7, 8 is ", Math.min(6, 7, 8));
+            <br>console.log("Minimum value of numbers 16, 7, 18 is ", Math.min(16, 7, 18));
+            <br>console.log("Maximum value of numbers 16, 7, 18 is ", Math.max(16, 7, 18));
+            <br>console.log("Maximum value of numbers 16, 7, 18 is ", Math.max(16, 7, 18));
+            <br>
+            <br>// Random number generator
+            <br>let r = Math.random();
+            <br>console.log("random number between 0 and 1: ", r);
+            <br>
+            <br>// random number between (a1,b1) = a1 + (b1-a1)*Math.random()
+            <br>let a1 = 1;
+            <br>let b1 = 100;
+            <br>let r1_100 = a1 + (b1 - a1) * Math.random();
+            <br>console.log("The random number between 1 and 100 is", r1_100);
+            <br>
+            <br>let a2 = 1;
+            <br>let b2 = 100;
+            <br>let r50_60 = a1 + (b1 - a1) * Math.random();
+            <br>console.log("The random number between 50 and 60 is", r50_60);
+
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+            <p id="output"></p>
+            <img class="outputimage" src="images/output61.PNG" alt="console output tutorial 61.">
+        </section>
+        <section id="content">
+
+
+        </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------JavaScript ----------------------------------------- -->
+    <script>
+        let m = Math;
+        console.log(m);
+
+        // Printing the constant from Math object
+        console.log("The value of Math.E is", Math.E);
+        console.log("The value of Math.LN2 is", Math.LN2);
+        console.log("The value of Math.LN10 is", Math.LN10);
+        console.log("The value of Math.LOG2E is", Math.LOG2E);
+        console.log("The value of Math.LOG10E is", Math.LOG10E);
+        console.log("The value of Math.PI is", Math.PI);
+        console.log("The value of Math.SQRT1_2 is", Math.SQRT1_2);
+        console.log("The value of Math.SQRT2 is", Math.SQRT2);
+
+        // Printing the Functions from Math Object
+        let a = 34.65434;
+        let b = 49;
+
+        console.log("The value of a and b is", a, b);
+        console.log("The value of a and b rounded is ", Math.round(a), Math.round(b));
+        console.log("3 raised to the power 2 is ", Math.pow(3, 2));
+        console.log("square root of " + b + " is ", Math.sqrt(b));
+        console.log("square root of '50' is ", Math.sqrt(50));
+        console.log("Math.ceil() gives the rounded up to nearest integer value " + a + " ", Math.ceil(a));
+        console.log("Math.floor() gives the rounded down to nearest integer value " + a + " ", Math.floor(a));
+
+        console.log("Math.abs() gives absolute value of number ", Math.abs(-5.66));
+        console.log("Math.abs() gives absolute value of number ", Math.abs(5.66));
+
+        // Trignometric Functions
+        console.log("The value of sin(PI/2) is ", Math.sin(Math.PI / 2));
+        console.log("The value of cos(PI/2) is ", Math.cos(Math.PI / 2));
+        console.log("The value of tan(PI/2) is ", Math.tan(Math.PI / 2));
+
+        // min and max function
+
+        console.log("Minimum value of numbers 6, 7, 8 is ", Math.min(6, 7, 8));
+        console.log("Minimum value of numbers 16, 7, 18 is ", Math.min(16, 7, 18));
+        console.log("Maximum value of numbers 16, 7, 18 is ", Math.max(16, 7, 18));
+        console.log("Maximum value of numbers 16, 7, 18 is ", Math.max(16, 7, 18));
+
+        // Random number generator
+        let r = Math.random();
+        console.log("random number between 0 and 1: ", r);
+
+        // random number between (a1,b1) = a1 + (b1-a1)*Math.random()
+        let a1 = 1;
+        let b1 = 100;
+        let r1_100 = a1 + (b1 - a1) * Math.random();
+        console.log("The random number between 1 and 100 is", r1_100);
+
+        let a2 = 1;
+        let b2 = 100;
+        let r50_60 = a1 + (b1 - a1) * Math.random();
+        console.log("The random number between 50 and 60 is", r50_60);
+    </script>
+
+</body>
+
+</html>

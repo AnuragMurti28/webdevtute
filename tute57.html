@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Events 57</title>
+
+</head>
+<!-- style tag -->
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'main main main main''div div div div''code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(31, 117, 143);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: main;
+        grid-gap: 10px;
+        background-color: rgb(213, 71, 71);
+        padding: 10px;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    #main li {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 10px;
+        margin: 2px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .outputimage {
+        height: 250px;
+        width: 500px;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+    #btn {
+        padding: 10px;
+        background-color: rgb(228, 134, 33);
+        border: 4px 4px groove rgba(141, 115, 10, 0.994);
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+    }
+</style>
+
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav id="nav" class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial |Events</h1>
+            </div>
+        </div>
+        <div id="main" class="container">
+            <div class="test-content">
+                <h1>Javascript Events tutorial</h1>
+                <p id="para">
+                    <br>function toggle() {
+                    <br>let btn = document.getElementById('btn');
+                    <br>let para = document.getElementById('para');
+                    <br>if (para.style.display != 'none') {
+                    <br>
+                    <br> para.style.display = 'none';
+                    <br>} else {
+                    <br> para.style.display = 'block';
+                    <br>} }
+                </p>
+
+            </div>
+            <button id="btn" onclick="toggle()">show/hide</button>
+        </div>
+        <section class="code">
+            <h3>INPUTS</h3>
+
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+
+        </section>
+        <section id="content">
+            <h3>Browser Events</h3>
+            This is tutorial for Events in JavaScript.
+
+        </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------JavaScript ----------------------------------------- -->
+    <script>
+        let para = document.getElementById('para');
+        para.addEventListener('mouseover', function run() {
+            console.log('mouse inside');
+        });
+        para.addEventListener('mouseout', function run() {
+            console.log('mouse now went outside');
+        });
+
+        function toggle() {
+            let btn = document.getElementById('btn');
+            let para = document.getElementById('para');
+            if (para.style.display != 'none') {
+
+                para.style.display = 'none';
+            } else {
+                para.style.display = 'block';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | JSON Server</title>
+    <script src="tute63.js"></script>
+</head>
+<!-- style tag -->
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'main main main main''div div div div''code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(31, 117, 143);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: main;
+        grid-gap: 10px;
+        background-color: rgb(213, 71, 71);
+        padding: 10px;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    #main li {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 10px;
+        margin: 2px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .outputimage {
+        height: auto;
+        width: 3fr;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+    #btn {
+        padding: 10px;
+        background-color: rgb(228, 134, 33);
+        border: 4px 4px groove rgba(141, 115, 10, 0.994);
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+    }
+</style>
+
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav id="nav" class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial | JSON Server</h1>
+            </div>
+        </div>
+        <div id="main" class="container">
+
+        </div>
+        <section class="code">
+            <br> const http = require('http');
+            <br> fs = require('fs');
+            <br>
+            <br> const hostname = '127.0.0.1';
+            <br> const port = 3100;
+            <br>
+            <br> fs.readFile('./tute63.html', function(err, html) {
+            <br> if (err) {
+            <br> throw err;
+            <br> }
+            <br> const server = http.createServer((req, res) => {
+            <br> res.statusCode = 200;
+            <br> res.setHeader('Content-Type', 'text/html');
+            <br> res.write(html);
+            <br> res.end();
+            <br> });
+            <br>
+            <br> server.listen(port, hostname, () => {
+            <br> console.log(`Server running at http://${hostname}:$<br>{port}/`);
+            <br> })
+            <br> });
+
+
+
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+            <p id="output"></p>
+            <!-- <img class="outputimage" src="images/output62.PNG" alt="console output tutorial 62."> -->
+        </section>
+        <section id="content">
+
+            <p>
+                to start server of javascript use " $ node filename"
+                <br>$ node tute63.js
+                <br> Server running at http://127.0.0.1:3100/
+                <br>
+                <br> to quit server " ctrl + c"
+            </p>
+        </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------JavaScript ----------------------------------------- -->
+
+
+</body>
+
+</html>

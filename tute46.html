@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Tutorial</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header' 'div div div section' 'main main main section ';
+    }
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .heading {
+        background-color: darkgoldenrod;
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .about-us {
+        background-color: crimson;
+        grid-area: section;
+        padding: 5px;
+    }
+    
+    .notes {
+        background-color: darkgray;
+        grid-area: main;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header class="home">
+        <nav class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header -->
+    <div class="heading">
+        <div class="row">
+            <h1>This is JavaScript Tutorial</h1>
+        </div>
+    </div>
+    <section class="about-us">
+        Tutorial
+    </section>
+    <main class="notes">
+        console.log('hello world');
+
+    </main>
+
+
+    <!-- ///////////////////////////////////////////////////////WRITE YOUR JS HERE////////////////////////////////////////////////////  -->
+    <script>
+        console.log('hello world')
+    </script>
+</body>
+
+</html>

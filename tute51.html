@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope and Conditional </title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ''content content content content';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'div div div div' 'code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(70, 156, 182);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial | Scope and Conditionals</h1>
+            </div>
+        </div>
+        <section class="code">
+            <h3>INPUTS</h3>
+            <br>var string1 = "this is a string";
+            <br>console.log(string1);
+            <br>var string1 = "this is string2";
+            <br>console.log(string1);
+            <br>let a = "u"; {
+            <br> let a = "u6"
+            <br> console.log("value of 'a' inside block is :" + (a));
+            <br>}
+            <br>console.log("value of 'a' outside block is :" + (a));
+            <br>const b = "This cannot be changed this is declared using <br>'const'";
+            <br>console.log("b : " + (b));
+            <br>
+            <br>let age = 34;
+            <br>//if - else conditionals
+            <br>if (age > 18) {
+            <br> console.log("you can drink water");
+            <br>} else if (age == 2) {
+            <br> console.log("Age is 2");
+            <br>} else {
+            <br> console.log("you can drink cold drink");
+            <br>}
+            <br>
+            <br>// switch case conditionals
+            <br>
+            <br>switch (cups = 4) {
+            <br> case 4:
+            <br> console.log("The value of cups is 4");
+            <br> break;
+            <br> case 41:
+            <br> console.log("The value of cups is 41");
+            <br> break;
+            <br> case 42:
+            <br> console.log("The value of cups is 42");
+            <br> break;
+            <br> case 43:
+            <br> console.log("The value of cups is 43");
+            <br> break;
+            <br> default:
+            <br> console.log("The value of cups is none of 4, 41, 42, <br>43");
+            <br>}
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+            <br>this is a string
+            <br>tute51.html:172 this is string2
+            <br>tute51.html:175 value of 'a' inside block is :u6
+            <br>tute51.html:177 value of 'a' outside block is :u
+            <br>tute51.html:179 b : This cannot be changed this is declared using 'const'
+            <br>tute51.html:184 you can drink water
+            <br>tute51.html:195 The value of cups is 4
+        </section>
+        <section id="content">
+            <br>"var" have global level scope.
+            <br>"let" have block level scope.
+            <br>"const" never change throughout the program.
+        </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------------------------------------------JavaScript ------------------------------------------->
+    <script>
+        var string1 = "this is a string";
+        console.log(string1);
+        var string1 = "this is string2";
+        console.log(string1);
+        let a = "u"; {
+            let a = "u6"
+            console.log("value of 'a' inside block is :" + (a));
+        }
+        console.log("value of 'a' outside block is :" + (a));
+        const b = "This cannot be changed this is declared using 'const'";
+        console.log("b : " + (b));
+
+        let age = 34;
+        //if - else conditionals
+        if (age > 18) {
+            console.log("you can drink water");
+        } else if (age == 2) {
+            console.log("Age is 2");
+        } else {
+            console.log("you can drink cold drink");
+        }
+
+        // switch case conditionals
+
+        switch (cups = 4) {
+            case 4:
+                console.log("The value of cups is 4");
+                break;
+            case 41:
+                console.log("The value of cups is 41");
+                break;
+            case 42:
+                console.log("The value of cups is 42");
+                break;
+            case 43:
+                console.log("The value of cups is 43");
+                break;
+            default:
+                console.log("The value of cups is none of 4, 41, 42, 43");
+        }
+    </script>
+    <!-- -----------------------------------------------------------JavaScript ------------------------------------------->
+</body>
+
+</html>
