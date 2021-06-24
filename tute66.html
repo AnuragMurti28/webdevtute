@@ -153,7 +153,22 @@
         </div>
         <section class="code">
             <h3>INPUT code</h3>
-
+            <br>const http = require('http');
+            <br>const fs = require('fs');
+            <br>const fileContent = fs.readFileSync('./tute8.html');
+            <br>
+            <br>// creating server
+            <br>const server = http.createServer((req, res) => {
+            <br>
+            <br> res.writeHead(200, { 'Content-type': 'text/html' });
+            <br> res.end(fileContent);
+            <br>});
+            <br>
+            <br>server.listen(80, '127.0.0.1', () => {
+            <br>
+            <br> console.log("listening on port 80");
+            <br>
+            <br>});
 
 
 

@@ -4,7 +4,7 @@
 
 // Asynchronous
 const fs = require('fs');
-fs.readFile("./textfiles/tute65.txt", "utf-8", (err, data) => {
+fs.readFile("./textFiles/tute65.txt", "utf-8", (err, data) => {
     // this is callback function, it executes when the readFile operation is complete
     console.log(err, data);
 });

@@ -153,6 +153,44 @@
         <section class="code">
             <h3>INPUTS</h3>
 
+            <br> // First method
+            <br> function greet() {
+            <br> console.log('output from defining function and calling it separately');
+            <br> }
+            <br> greet();
+            <br> // new method
+            <br> greet2 = () => {
+            <br> console.log("output from Shortcut method(Arrow function) to define functions");
+            <br>
+            <br> }
+            <br>
+            <br> greet2();
+            <br>
+            <br> // new function calling and passing values
+            <br>
+            <br> setTimeout(() => {
+            <br> console.log("we are inside setTimeout");
+            <br> }, 3000);
+            <br>
+            <br> // add function normal
+            <br> let sum = (a, b) => {
+            <br> return a + b;
+            <br> }
+            <br>
+            <br> // /Simplified function without
+            <br> let sum2 = (c, d) => c + d;
+            <br>
+            <br> // obj1
+            <br> let obj1 = {
+            <br> greeting: "Good Morning",
+            <br> names: ["Harry", "Anurag", "skills", "Ananaya"],
+            <br> speak() {
+            <br> this.names.forEach((student) => {
+            <br> console.log(this.greeting + " kukdoo koo " + student);
+            <br> });
+            <br> }
+            <br> }
+            <br> obj1.speak();
 
 
         </section>
