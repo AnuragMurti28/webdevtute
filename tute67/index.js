@@ -3,7 +3,7 @@ const fs = require('fs');
 
 const hostname = '127.0.0.1';
 const port = 3500;
-const homepage = fs.readFileSync('./index.html');
+const homepage = fs.readFileSync('../index.html');
 const about = fs.readFileSync('./about.html');
 const services = fs.readFileSync('./services.html');
 const contact = fs.readFileSync('./contact.html');
