@@ -8,6 +8,127 @@
     <title>More on Selectors </title>
 </head>
 <style>
+    /* //////////////////////////////////////////////////////////////////////// */
+    
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'main main main main''div div div div''code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(31, 117, 143);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: main;
+        grid-gap: 10px;
+        background-color: rgb(213, 71, 71);
+        padding: 10px;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    #main li {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 10px;
+        margin: 2px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .outputimage {
+        height: auto;
+        width: auto;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+    #btn {
+        padding: 10px;
+        background-color: rgb(228, 134, 33);
+        border: 4px 4px groove rgba(141, 115, 10, 0.994);
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+    }
+    /* //////////////////////////////////////////////////////////////////////// */
+    
     h1 {
         background-color: olive;
         color: white;
@@ -40,25 +161,102 @@
 </style>
 
 <body>
-    <h1>Let us learn more about Selectors</h1>
-    <div class="container">
-        <div class="row">
+    <!-- ////////////////////////////////////////////////////////////// -->
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav id="nav" class="navbar">
             <ul>
-                <li class="item">
-                    <p>This is another paragraph inside div and li</p>
-                </li>
-                <!-- <li class="item"></li>
-                <li class="item"></li>
-                <li class="item"></li> -->
-                <p>This para is inside &ltul&gt tag</p>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
             </ul>
-            <p>This paragraph is direct child of &ltdiv&gt addressed by div > p{}</p>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>HTML CSS | Selectors</h1>
+            </div>
+        </div>
+        <div id="main" class="container">
 
         </div>
-        <p>This is another paragraph direct child of &ltdiv&gt and sibling to &ltdiv&gt </p>
-    </div>
+        <section class="code">
+            <br>h1 {
+            <br> background-color: olive;
+            <br> color: white;
+            <br> text-align: center;
+            <br> font-weight: bold;
+            <br>}
+            <br>
+            <br>div li p {
+            <br> color: white;
+            <br> background-color: green;
+            <br>}
+            <br>
+            <br>div p {
+            <br> /*this address the p inside anywhere of div*/
+            <br> color: white;
+            <br> background-color: rgb(133, 32, 25);
+            <br>}
+            <br>
+            <br>div>p {
+            <br> /* div>p shows addressing direct child of
+            <br>
+            <div> it applies only when
+                <br>
+                <p> is direct inside
+                    <br>
+                    <div>*/
+                        <br> color: white;
+                        <br> background-color: rgb(61, 158, 182);
+                        <br>}
+                        <br>
+                        <br>div+p {
+                        <br> /* this adddress the element which is first sibling to
+                        <p>*/
+                            <br> color: white;
+                            <br> background-color: rgb(176, 61, 182);
+                            <br>}
 
-    <p>This is outermost paragraph. it is also sibling to &ltdiv&gt addressed by div + p{}</p>
+
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+            <br>
+            <h1>Let us learn more about Selectors</h1>
+            <div class="container">
+                <div class="row">
+                    <ul>
+                        <li class="item">
+                            <p>This is another paragraph inside div and li</p>
+                        </li>
+                        <!-- <li class="item"></li>
+                <li class="item"></li>
+                <li class="item"></li> -->
+                        <p>This para is inside &ltul&gt tag</p>
+                    </ul>
+                    <p>This paragraph is direct child of &ltdiv&gt addressed by div > p{}</p>
+
+                </div>
+                <p>This is another paragraph direct child of &ltdiv&gt and sibling to &ltdiv&gt </p>
+            </div>
+
+            <p>This is outermost paragraph. it is also sibling to &ltdiv&gt addressed by div + p{}</p>
+            <p id="output"></p>
+            <!-- <img src="images/output65a.PNG" alt="output image tutorial 65" class="outputimage">
+            <img src="images/output65b.PNG" alt="terminal image tutorial 65" class="outputimage"> -->
+        </section>
+        <section id="content">
+
+
+        </section>
+        </div>
+        <!-- -------------------Notes---------------------------- -->
+
+        <!-- ////////////////////////////////////////////////////////////// -->
+
 </body>
 
 </html>
