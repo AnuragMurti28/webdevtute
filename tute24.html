@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display Property 24</title>
+    <meta name="title" content="This is the first html tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is html tutorial">
+    <meta name="keyword" content="html, html tutorials, web developement">
+    <meta name="robot-" content="NOINDEX, NOFOLLOW">
+    <!-- this is how we add external stylesheet -->
+    <!-- this is how we add external javascript-->
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="index.css ">
+    <!-- <link rel="stylesheet" href="index.css "> -->
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        .navbar {
+            border-radius: 38px;
+            background-color: rgb(136 51 51);
+            width: auto;
+            max-width: 100%;
+            height: auto;
+            max-height: fit-content;
+        }
+        /* nav {
+            box-sizing: border-box;
+        }*/
+        
+        .navbar li {
+            padding: 7px 3px;
+            margin: 10px 15px;
+            float: left;
+            list-style: none;
+        }
+        
+        .navbar ul {
+            overflow: auto;
+        }
+        
+        .navbar li a {
+            font-size: medium;
+            color: aliceblue;
+            padding: 3px 3px;
+            text-decoration: none;
+        }
+        
+        .navbar li a:hover {
+            color: rgb(58, 214, 89);
+        }
+        
+        .navbar input {
+            color: aliceblue;
+            box-sizing: border-box;
+            border-radius: 12px;
+            border-style: revert;
+            padding: 3px 10px;
+            width: auto;
+            background-color: #ffffff;
+        }
+        
+        .search {
+            float: right;
+            margin: 10px 15px;
+            padding: 3px 3px;
+        }
+        
+        .search input:hover {
+            background-color: rgb(58, 214, 89);
+        }
+        
+        header,
+        .navigation {
+            box-sizing: border-box;
+        }
+        
+        input,
+        .search::placeholder {
+            color: black;
+        }
+        
+        header,
+        #top {
+            display: inline-block;
+            margin: auto;
+            border: 2px solid red;
+            width: 1200px;
+        }
+        
+        h4,
+        #logo {
+            margin: auto;
+            background-color: none;
+            font-size: initial;
+            margin: 0px 0px;
+            text-align: center;
+        }
+        
+        img,
+        .logo {
+            display: block;
+            width: 80px;
+            margin: auto;
+        }
+        
+        .box {
+            border: 4px solid black;
+            display: inline-block;
+            margin: 2px;
+            padding: 2px;
+            width: 32.72%;
+            box-sizing: border-box;
+        }
+        
+        h5,
+        .heading {
+            background-color: rgb(26, 92, 26);
+        }
+        
+        .container {
+            display: inline-block;
+            margin: auto;
+            border: 2px solid red;
+            width: 1200px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax">
+
+
+        <header id="top">
+            <img class="logo" src="/images/signatureshort.jpg" alt="">
+            <h4 id="logo">Welcome to Tutorial blog</h4>
+
+        </header>
+
+        <div class=" container ">
+            <div class="box ">
+                <h5 class="heading ">Heading</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aliquid velit aliquam quasi recusandae blanditiis harum ipsum commodi labore sit adipisci, minima est amet consequuntur ab quam incidunt, quisquam sint!</p>
+            </div>
+            <div class="box ">
+                <h5 class="heading ">Heading</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aliquid velit aliquam quasi recusandae blanditiis harum ipsum commodi labore sit adipisci, minima est amet consequuntur ab quam incidunt, quisquam sint!</p>
+            </div>
+            <div class="box ">
+                <h5 class="heading ">Heading</h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aliquid velit aliquam quasi recusandae blanditiis harum ipsum commodi labore sit adipisci, minima est amet consequuntur ab quam incidunt, quisquam sint!</p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

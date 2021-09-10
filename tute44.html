@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids Template areas</title>
+</head>
+<style>
+    /************************NAVBAR************************/
+    
+    .container1 {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'navbar navbar navbar navbar' 'section section section aside' 'footer footer footer footer';
+    }
+    /************************Item1*************************/
+    
+    .item1 {
+        background-color: rgb(99, 165, 33);
+        color: white;
+        border: 2px solid black;
+        padding: 24px;
+    }
+    /*======================NAVBAR=========================*/
+    
+    #navbar1 {
+        grid-area: navbar;
+    }
+    /*======================SECTION========================*/
+    
+    #section1 {
+        grid-area: section;
+    }
+    /*======================ASIDE==========================*/
+    
+    #aside1 {
+        grid-area: aside;
+    }
+    
+    footer {
+        grid-area: footer;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+    <!-- --------------------------Container1----------------------------------------- -->
+    <div class="container1">
+        <!-- ----------------------------NAVBAR--------------------------------- -->
+        <div id="navbar1" class="item1">
+            Home About ContactUs
+        </div>
+        <!-- ----------------------------Section-------------------------------- -->
+        <div id="section1" class="item1">grid-template-areas: 'navbar navbar navbar navbar' 'section section section aside';
+            <hr> Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere voluptates enim odio omnis accusamus eos eius vitae porro a corporis dolorem fugit, recusandae doloremque ducimus sed ipsum rem pariatur architecto quasi delectus vel fuga reiciendis
+            commodi! Sequi debitis neque voluptates, magni deleniti quod adipisci commodi, exercitationem dignissimos blanditiis vero repellat tempora! Itaque rem consectetur sit voluptas quisquam distinctio ipsam, mollitia ad id dolorum quaerat porro
+            repellendus omnis laudantium, asperiores qui at delectus magnam autem aliquam quas culpa est accusantium aut? Numquam consequatur molestiae, nesciunt nostrum necessitatibus quis ex nemo aut fugit omnis non ducimus laudantium cumque quibusdam
+            quos voluptatibus! Necessitatibus?
+        </div>
+        <!-- ----------------------------ASIDE---------------------------------- -->
+        <div id="aside1" class="item1">
+            #navbar1 { grid-area: navbar; }
+            <br> #section1 { grid-area: section; }
+            <br> #aside1 { grid-area: aside; }
+            <br>
+            <hr> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eaque vitae quo id repellat voluptas itaque suscipit sequi. Blanditiis, optio fugiat doloribus impedit fuga porro laborum dolores dolore corporis cumque saepe. Doloremque suscipit
+            maxime enim! Eos consequuntur perspiciatis fugiat natus hic ut distinctio cupiditate tempora, deserunt dolorum quod? Quis earum reiciendis rem perspiciatis nobis voluptatibus modi quae, facere odio consequuntur ipsam, animi ducimus, nulla
+            accusantium! Aliquid asperiores, vel itaque dolor ut deserunt odit optio vitae dolorum consequuntur tempora qui nam mollitia unde quam, soluta, quos officiis autem. Non, suscipit itaque rerum dolor deleniti voluptas repudiandae voluptatem
+            nulla officia deserunt, ut totam?
+        </div>
+        <footer id="footer" class="item1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit voluptatum debitis veniam.</footer>
+
+    </div>
+
+</body>
+
+</html>

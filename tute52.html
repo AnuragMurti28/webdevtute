@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and Objects</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ''content content content content';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'div div div div' 'code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(70, 156, 182);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial | Arrays and Objects</h1>
+            </div>
+        </div>
+        <section class="code">
+            <h3>INPUTS</h3>
+            <!-- <script> -->
+            <br>let myVar = 34; //integer
+            <br>let myVar2 = "string";
+            <br>let myVar3 = true;
+            <br>let myVar4 = null;
+            <br>let myVar5 = undefined;
+
+            <br>let employee = {
+            <br> name: "Anurag",
+            <br> salary: 10,
+            <br> channel: "CodeWithAnurag",
+            <br> channel2: "ProgrammingWithAnurag",
+            <br>}
+            <br>console.log(employee);
+            <br>let names = [8, 11, 12, "harry", undefined]; //array as object
+            <br>console.log(names);
+
+            <br>let names2 = new Array(3, 6, 9, "Anurag", undefined); //array as new
+            <br>console.log(names2);
+            <br>console.log("Length of array names2 : " + (names2.length));
+            <br>names = names.sort(); // sort array
+            <br>console.log(names);
+            <br>names.push("pushed element"); // push element at last of array
+            <br>console.log(names);
+
+            <br>console.log("employee channel1 : " + (employee.channel));
+            <!-- </script> -->
+
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+            <br> {name: "Anurag", salary: 10, channel: "CodeWithAnurag", channel2: "ProgrammingWithAnurag"}
+            <br> channel: "CodeWithAnurag"
+            <br> channel2: "ProgrammingWithAnurag"
+            <br> name: "Anurag"
+            <br> salary: 10
+            <br> __proto__: Objectconstructor: ƒ Object()hasOwnProperty: ƒ hasOwnProperty()isPrototypeOf: ƒ isPrototypeOf()propertyIsEnumerable: ƒ propertyIsEnumerable()<br>toLocaleString: ƒ toLocaleString()toString: ƒ toString()valueOf: ƒ valueOf()__defineGetter__:
+            ƒ __defineGetter__()__defineSetter__: ƒ __defineSetter__()<br>__lookupGetter__: ƒ __lookupGetter__()__lookupSetter__: ƒ __lookupSetter__()get __proto__: ƒ __proto__()set __proto__: ƒ __proto__()
+            <br> tute52.html:172 (5) [8, 11, 12, "harry", undefined]0: 111: 122: 83: "harry"4: undefined5: "pushed element"length: 6__proto__: Array(0)
+            <br> tute52.html:175 (5) [3, 6, 9, "Anurag", undefined]0: 31: 62: 93: "Anurag"4: undefinedlength: 5__proto__: Array(0)
+            <br> tute52.html:176 Length of array names2 : 5
+            <br> tute52.html:178 (5) [11, 12, 8, "harry", undefined]0: 111: 122: 83: "harry"4: undefined5: "pushed element"length: 6__proto__: Array(0)
+            <br> tute52.html:180 (6) [11, 12, 8, "harry", undefined, "pushed element"]0: 111: 122: 83: "harry"4: undefined5: "pushed element"length: 6__proto__: Array(0)
+            <br> tute52.html:182 employee channel1 : CodeWithAnurag
+        </section>
+        <section id="content">
+
+        </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------------------------------------------JavaScript ------------------------------------------->
+    <script>
+        let myVar = 34; //integer
+        let myVar2 = "string";
+        let myVar3 = true;
+        let myVar4 = null;
+        let myVar5 = undefined;
+
+        let employee = {
+            name: "Anurag",
+            salary: 10,
+            channel: "CodeWithAnurag",
+            channel2: "ProgrammingWithAnurag",
+        }
+        console.log(employee);
+        let names = [8, 11, 12, "harry", undefined]; //array as object
+        console.log(names);
+
+        let names2 = new Array(3, 6, 9, "Anurag", undefined); //array as new 
+        console.log(names2);
+        console.log("Length of array names2 : " + (names2.length));
+        names = names.sort(); // sort array
+        console.log(names);
+        names.push("pushed element"); // push element at last of array
+        console.log(names);
+
+        console.log("employee channel1 : " + (employee.channel));
+    </script>
+    <!-- -----------------------------------------------------------JavaScript -------------------------------------    ------>
+
+</body>
+
+</html>

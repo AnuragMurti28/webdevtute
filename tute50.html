@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS String Functions</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'div div div div' 'code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(70, 156, 182);
+        padding: 10px;
+        align-content: center;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial | Strings and String Methods</h1>
+            </div>
+        </div>
+        <section class="code">
+            <h3>INPUTS</h3>
+            <br>var str = "This is a string";
+            <br>console.log(str);
+            <br>var position = str.indexOf('is'); //first occurance of a substring//
+            <br>console.log(position);
+            <br>var position2 = str.lastIndexOf('is'); //last occurence of a substring//
+            <br>console.log(position2);
+            <br>var substr = str.slice(1, 6); //substring - using slice(index,index)
+            <br>console.log(substr);
+            <br>var substr2 = str.substring(1, 6); //substring - using substring(index,index)
+            <br>console.log(substr2);
+            <br>var substr3 = str.substr(1, 7); //substring - using substr(index,length)
+            <br>console.log(substr3);
+            <br>var replaced = str.replace('string', 'harry'); //replace the string.
+            <br>console.log(replaced);
+            <br>console.log(str.toUpperCase()); //transform to uppercase.
+            <br>console.log(str);
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+            <br>This is a string
+            <br>tute50.html:147 2
+            <br>tute50.html:149 5
+            <br>tute50.html:151 his i
+            <br>tute50.html:153 his i
+            <br>tute50.html:155 his is
+            <br>tute50.html:157 This is a harry
+            <br>tute50.html:158 THIS IS A STRING
+            <br>tute50.html:159 This is a string
+        </section>
+        <section id="content"> </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------------------------------------------JavaScript ------------------------------------------->
+    <script>
+        var str = "This is a string";
+        console.log(str);
+        var position = str.indexOf('is'); //first occurrence of a substring//
+        console.log(position);
+        var position2 = str.lastIndexOf('is'); //last occurrence of a substring//
+        console.log(position2);
+        var substr = str.slice(1, 6); //substring - using slice(index,index)
+        console.log(substr);
+        var substr2 = str.substring(1, 6); //substring - using substring(index,index)
+        console.log(substr2);
+        var substr3 = str.substr(1, 7); //substring - using substr(index,length)
+        console.log(substr3);
+        var replaced = str.replace('string', 'harry'); //replace the string.
+        console.log(replaced);
+        console.log(str.toUpperCase()); //transform to uppercase.
+        console.log(str);
+        var newString = str.concat('New String'); //  concatenate
+        console.log(newString);
+        var strwhitespaces = "    This contains      white spaces   ";
+        console.log(strwhitespaces);
+        console.log(strwhitespaces.trim()); //trims white spaces from start and end
+
+        var char3 = str.charAt(2);
+        console.log(char3);
+
+        var char4 = str.charCodeAt(position2);
+        console.log(char4);
+
+        console.log(str[2]);
+    </script>
+    <!-- -----------------------------------------------------------JavaScript ------------------------------------------->
+</body>
+
+</html>

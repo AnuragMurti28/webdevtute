@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Loops</title>
+
+</head>
+<!-- style tag -->
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ''content content content content';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'div div div div''code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(70, 156, 182);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .outputimage {
+        height: 250px;
+        width: 500px;
+        padding: 2px;
+        margin: 2px;
+    }
+</style>
+
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial | Loops</h1>
+            </div>
+        </div>
+        <section class="code">
+            <h3>INPUTS</h3>
+            <br>console.log("this is tutorial 55");
+            <br>//loop1
+            <br>let i = 0;
+            <br>for (i = 0; i
+            < 3; i++) { <br> console.log(i);
+                <br>}
+                <br>///loop2
+                <br>let friends = ["Rohan", "Sanjeev", "Deepti", "Pooja", "Shikha"];
+                <br>for (let index = 0; index
+                < friends.length; index++) { <br> console.log("Hello!" + friends[index] + "\n");
+                    <br>
+                    <br>}
+                    <br>// for each loop
+                    <br>friends.forEach(function f(element) {
+                    <br> console.log("hello! " + element + " using for each loop");
+                    <br> })
+                    <br> // for of loop
+                    <br>for (const element of friends) {
+                    <br> console.log("Hello!" + element + " welcome in for of loop.");
+                    <br>}
+                    <br>
+                    <br>let employee = {
+                    <br> name: "Anurag",
+                    <br> salary: 10000,
+                    <br> channel: "cwh"
+                    <br>
+                    <br> }
+                    <br> // for Key in loop
+                    <br>for (const key in employee) {
+                    <br> if (Object.hasOwnProperty.call(employee, key)) {
+                    <br> const element = employee[key];
+                    <br>
+                    <br> console.log("The " + key + " of employee is " + element);
+                    <br> }
+                    <br>}
+                    <br>
+                    <br>// while loop
+                    <br>while (i
+                    < 4) { <br> console.log('${i} is less than 4');
+                        <br> i++;
+                        <br>}
+                        <br>
+                        <br>// do while loop
+                        <br>let j = 0;
+                        <br>do {
+                        <br> console.log("while loop for " + j + "
+                        < 10 ");
+            <br>    j++;
+            <br>} while (j < 10)
+
+        </section>
+        <section class="output ">
+            <h3>OUTPUTS</h3>
+            <img src="/images/output55a.PNG " alt="tute55 output " class="outputimage ">
+            <img src="/images/output55b.PNG " alt="tute55 output " class="outputimage ">
+        </section>
+        <section id="content ">
+
+        </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------JavaScript ----------------------------------------- -->
+    <script>
+        console.log("this is tutorial 55 ");
+        //loop1
+        let i = 0;
+        for (i = 0; i < 3; i++) {
+            console.log(i);
+        }
+        ///loop2
+        let friends = ["Rohan ", "Sanjeev ", "Deepti ", "Pooja ", "Shikha "];
+        for (let index = 0; index < friends.length; index++) {
+            console.log("Hello! " + friends[index] + "\n ");
+
+        }
+        // for each loop
+        friends.forEach(function f(element) {
+                console.log("hello! " + element + " using for each loop ");
+            })
+            // for of loop
+        for (const element of friends) {
+            console.log("Hello! " + element + " welcome in for of loop. ");
+        }
+
+        let employee = {
+                name: "Anurag ",
+                salary: 10000,
+                channel: "cwh "
+
+            }
+            // for Key in loop
+        for (const key in employee) {
+            if (Object.hasOwnProperty.call(employee, key)) {
+                const element = employee[key];
+
+                console.log("The " + key + " of employee is " + element);
+            }
+        }
+
+        // while loop
+        while (i < 4) {
+            console.log('${i} is less than 4');
+            i++;
+        }
+
+        // do while loop
+        let j = 0;
+        do {
+            console.log("while loop for " + j + " < 10 ");
+            j++;
+        } while (j < 10)
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Box Model Margin annd Padding</title>
+    <meta name="title" content="This is the first html tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is html tutorial">
+    <meta name="keyword" content="html, html tutorials, web developement">
+    <meta name="robot-" content="NOINDEX, NOFOLLOW">
+    <!-- this is how we add external stylesheet -->
+    <link rel="stylesheet" href="index.css ">
+    <!-- this is how we add external javascript-->
+    <script src="index.js"></script>
+    <!-- internal stylesheet -->
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 2px;
+            padding: 2px;
+        }
+        
+        .container {
+            background-color: #80e0b6;
+            border: 2px solid #0e4482;
+            /* margin: 5px;
+            /*padding-top: 2px;
+            padding-right: 2px;
+            padding-bottom: 2px;
+            padding-left: 2px;
+            padding: 10px 10px; -->*/
+            width: 283px;
+            height: 300px;
+            float: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="parallax">
+
+        <!-- header -->
+        <header>
+            <a class="home-button" href="index.html">home</a>
+        </header>
+        <!-- header -->
+
+        <h1 style="border: 2px solid white;">&lth1&gt This is sample website created with practicing basics HTML CSS from tutorial
+        </h1>
+        <h2 style="border: 2px solid black"></h2>
+
+        <div class="container">
+            <h3>This is heading</h3>
+            <p id="first">This is tutorial for box model, padding , margin <br> we can give padding individually <br> padding-top: 2px; padding-right: 2px; padding-bottom: 2px; padding-left: 2px;</p>
+        </div>
+
+        <div class="container">
+            <h3>This is heading</h3>
+            <p id="second">This is tutorial for box model, padding , margin <br> we can give padding as co-ordinate system (padding: x y) [x for left and right] and [y for top and bottom] </p>
+        </div>
+
+        <div class="container">
+            <h3>This is heading</h3>
+            <p id="third">This is tutorial for box model, padding , margin we can give padding for all four sides (padding: t r b l) </p>
+        </div>
+
+    </div>
+
+
+</body>
+
+</html>

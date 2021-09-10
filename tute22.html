@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Pseudo Selectors and more Designing</title>
+    <meta name="title" content="This is the first html tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is html tutorial">
+    <meta name="keyword" content="html, html tutorials, web developement">
+    <meta name="robot-" content="NOINDEX, NOFOLLOW">
+    <!-- this is how we add external stylesheet -->
+    <link rel="stylesheet" href="index.css ">
+    <!-- this is how we add external javascript-->
+    <script src="index.js"></script>
+    <style>
+        .container {
+            align-content: center;
+            border: 2px solid rgb(150, 18, 18);
+            background-color: bisque;
+            width: 600px;
+            height: auto;
+            margin: 10px auto;
+        }
+        
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        a:hover {
+            color: rgb(89, 25, 25);
+        }
+        
+        a:visited {
+            background-color: yellowgreen;
+        }
+        
+        a:active {
+            background-color: green;
+        }
+        
+        a:active {
+            background-color: blue;
+        }
+        
+        .btn {
+            background-color: brown;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 12px;
+            border-radius: 5px;
+        }
+        
+        .btn:hover {
+            color: goldenrod;
+            background-color: greenyellow;
+        }
+        
+        .btn:active {
+            color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="parallax">
+        <!-- header -->
+        <header>
+            <a class="home-button" href="index.html">home</a>
+        </header>
+        <!-- header -->
+
+        <h1 style="border: 2px solid white;">&lth1&gt This is sample website created with practicing basics HTML CSS from tutorial
+        </h1>
+        <h2>Tutorial 22: Pseudo Selectors and more Designing </h2>
+
+        <div class="container" id="cont1">
+            <h3>This is my heading </h3>
+
+            <p>This is the tutorial for Pseudo Selector like <em>hover, visited, active which are used as an indicatora whether the link is activate, visited and hoverd while moving cursor over it.</em>
+            </p><br>
+            <a href="" class="btn">Read More</a>
+            <button href="" class="btn">Contact us</button>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

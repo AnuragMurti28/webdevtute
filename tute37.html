@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions in CSS</title>
+
+</head>
+<style>
+    .home-button {
+        color: white;
+        text-decoration: none;
+    }
+    
+    header:hover {
+        box-shadow: 0px 0px rgb(60, 63, 63);
+    }
+    
+    header {
+        display: inline-flex;
+        margin: 5px 5px;
+        padding: 2px 2px;
+        background-color: darkcyan;
+        box-shadow: -2px -2px rgb(60, 63, 63);
+    }
+    
+    #box1 {
+        margin: 5px 5px;
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: green;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        transition-property: background-color;
+        transition-duration: 2s;
+        transition-timing-function: ease-in;
+        overflow-y: scroll;
+    }
+    
+    #box1:hover {
+        background-color: rgb(199, 44, 44);
+        height: 300px;
+        width: 300px;
+    }
+    
+    #box2 {
+        margin: 5px 5px;
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(128, 124, 0);
+        color: white;
+        justify-content: center;
+        align-items: center;
+        transition-duration: 2s;
+        transition-timing-function: ease-out;
+        overflow-y: scroll;
+    }
+    
+    #box2:hover {
+        background-color: rgb(114, 13, 80);
+        height: 300px;
+        width: 300px;
+    }
+    
+    #box3 {
+        margin: 5px 5px;
+        display: flex;
+        height: 200px;
+        width: 200px;
+        background-color: rgb(10, 86, 129);
+        color: white;
+        justify-content: center;
+        align-items: center;
+        /*transition-duration: 4s;*/
+        /*transition-timing-function: ease-out;*/
+        transition: all 2s ease-in-out;
+        overflow-y: scroll;
+    }
+    
+    #box3:hover {
+        background-color: rgb(189, 32, 32);
+        width: 300px;
+        height: 300px;
+    }
+    
+    details:hover {
+        cursor: pointer;
+    }
+    
+    .container {
+        display: flex;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+
+    <h1>This is CSS Transitions Tutorial</h1>
+    <div class="container">
+        <div class="box" id="box1">
+            <details>
+
+                <summary>Open to view notes</summary>
+                <h3>This is my box1.</h3>
+                <hr>
+                <p>In box1 I will using <b><i>transition property</i></b> for changing background color with hover.</p>
+                <br>Transition duration working in both ways,
+            </details>
+
+        </div>
+        <div class="box" id="box2">
+            <details>
+
+                <summary>Open to view notes</summary>
+                <h3>This is my box2.</h3>
+                <hr>
+                <p>box2 में <b><i>transition property</i></b> का इस्तेमाल hover के साथ किया है । </p>
+                <br>Transition duration working in both ways,
+            </details>
+        </div>
+        <div class="box" id="box3">
+            <details>
+
+                <summary>Open to view notes</summary>
+                <h3>This is my box3.</h3>
+                <hr>
+                <p>In box3 I shorthand for transition property is used defining by <b><i>transition:</i></b> <br>First we have to create short hand that which value is placed where like functions are defined.</p>
+                <br>Transition duration working in both ways. <br> transition:<b>all</b> ul 2s ease-in-out 3s;
+            </details>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids autofix & min-max</title>
+</head>
+<style>
+    #container1 {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 200px 200px 200px;
+        justify-content: center;
+        margin: 5px;
+    }
+    
+    .box1 {
+        border: 2px solid black;
+        background-color: rgb(31, 160, 115);
+        color: white;
+        padding: 24px;
+    }
+    
+    #container2 {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: center;
+        margin: 5px;
+    }
+    
+    .box2 {
+        border: 2px solid black;
+        background-color: rgb(31, 160, 68);
+        color: white;
+        padding: 24px;
+    }
+    
+    #container3 {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        /*justify-content: center;*/
+        margin: 5px;
+    }
+    
+    .box3 {
+        border: 2px solid black;
+        background-color: rgb(160, 31, 113);
+        color: white;
+        padding: 24px;
+    }
+    
+    .important {
+        color: black;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <!-- <header>
+        <a class="home-button" href="index.html">home</a>
+    </header> -->
+    <!-- header -->
+    <div class="container" id="container1">
+        <div class="box1">Item-1<br>grid-template-columns: 200px 200px 200px;</div>
+        <div class="box1">Item-2</div>
+        <div class="box1">Item-3</div>
+        <div class="box1">Item-4</div>
+        <div class="box1">Item-5</div>
+        <div class="box1">Item-6</div>
+        <div class="box1">Item-7</div>
+        <div class="box1">Item-8</div>
+        <div class="box1">Item-9</div>
+        <div class="box1">Item-10</div>
+        <div class="box1">Item-11</div>
+        <div class="box1">Item-12</div>
+    </div>
+    <div class="container" id="container2">
+        <div class="box2">Item-1<br>grid-template-columns: 1fr 1fr 1fr;</div>
+        <div class="box2">Item-2</div>
+        <div class="box2">Item-3</div>
+        <div class="box2">Item-4</div>
+        <div class="box2">Item-5</div>
+        <div class="box2">Item-6</div>
+        <div class="box2">Item-7</div>
+        <div class="box2">Item-8</div>
+        <div class="box2">Item-9</div>
+        <div class="box2">Item-10</div>
+        <div class="box2">Item-11</div>
+        <div class="box2">Item-12</div>
+    </div>
+    <div class="container" id="container3">
+        <div class="box3">Item-1<br>grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));</div>
+        <div class="box3">Item-2</div>
+        <div class="box3">Item-3</div>
+        <div class="box3">Item-4</div>
+        <div class="box3">Item-5</div>
+        <div class="box3">Item-6</div>
+        <div class="box3">Item-7</div>
+        <div class="box3">Item-8</div>
+        <div class="box3">Item-9</div>
+        <div class="box3">Item-10</div>
+        <div class="box3">Item-11</div>
+        <div class="box3">Item-12</div>
+    </div>
+</body>
+
+</html>

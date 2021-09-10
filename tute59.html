@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Date & Time</title>
+</head>
+<!-- style tag -->
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'main main main main''div div div div''code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(31, 117, 143);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: main;
+        grid-gap: 10px;
+        background-color: rgb(213, 71, 71);
+        padding: 10px;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    #main li {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 10px;
+        margin: 2px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .outputimage {
+        height: auto;
+        width: 700px;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+    #btn {
+        padding: 10px;
+        background-color: rgb(228, 134, 33);
+        border: 4px 4px groove rgba(141, 115, 10, 0.994);
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+    }
+</style>
+
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav id="nav" class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial |SetInterval | setTimeout</h1>
+            </div>
+        </div>
+        <div id="main" class="container">
+            Time now is <span id="time"></span>
+        </div>
+        <section class="code">
+            <h3>INPUTS</h3>
+
+            <br>console.log("this is date and time tutorial");
+            <br>let now = new Date();
+            <br>console.log("date from 'now' variable : " + now);
+            <br>
+            <br>let dt = new Date(1000);
+            <br>console.log("date from 'dt' variable : " + dt);
+            <br>
+            <br>// Date(year, month, date, hour, minute, seconds, miliseconds)
+            <br>let dt2 = new Date(2021, 9, 4, 6, 3, 2, 32);
+            <br>console.log("date from 'dt2' variable : " + dt2);
+            <br>
+            <br>let dt3 = new Date();
+            <br>let yr = dt3.getFullYear();
+            <br>console.log("year from 'yr' variable : " + yr);
+            <br>
+            <br>let month = dt3.getMonth();
+            <br>console.log("year from 'month' variable : " + month);
+            <br>
+            <br>let date = dt3.getDate();
+            <br>console.log("year from 'date' variable : " + date);
+            <br>
+            <br>let day = dt3.getDay();
+            <br>console.log("year from 'day' variable : " + day);
+            <br>
+            <br>// change date or day
+            <br>dt3.setDate(20);
+            <br>console.log("new date set is: " + dt3);
+            <br>
+            <br>// if we set date 32 33 or more than 31 it automatically takes that from next month
+            <br>dt3.setDate(40);
+            <br>console.log("new date set is: " + dt3);
+            <br>
+            <br>// setDate()
+            <br>dt3.setDate(8);
+            <br>// setMinutes()
+            <br>dt3.setMinutes(40);
+            <br>console.log("new date set by Minutes is: " + dt3);
+            <br>
+            <br>d4 = Date.now();
+            <br>console.log("difference from " + dt + "is: " + d4);
+            <br>
+            <br>// display date time
+            <br>setInterval(updateTime, 1000);
+            <br>
+            <br>function updateTime() {
+            <br> time.innerHTML = new Date();
+            <br>}
+
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+            <img class="outputimage" src="images/tute59.PNG" alt="console output tutorial 59.">
+        </section>
+        <section id="content">
+
+
+        </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------JavaScript ----------------------------------------- -->
+    <script>
+        console.log("this is date and time tutorial");
+        let now = new Date();
+        console.log("date from 'now' variable : " + now);
+
+        let dt = new Date(1000);
+        console.log("date from 'dt' variable : " + dt);
+
+        // Date(year, month, date, hour, minute, seconds, miliseconds)
+        let dt2 = new Date(2021, 9, 4, 6, 3, 2, 32);
+        console.log("date from 'dt2' variable : " + dt2);
+
+        let dt3 = new Date();
+        let yr = dt3.getFullYear();
+        console.log("year from 'yr' variable : " + yr);
+
+        let month = dt3.getMonth();
+        console.log("year from 'month' variable : " + month);
+
+        let date = dt3.getDate();
+        console.log("year from 'date' variable : " + date);
+
+        let day = dt3.getDay();
+        console.log("year from 'day' variable : " + day);
+
+        // change date or day
+        dt3.setDate(20);
+        console.log("new date set is: " + dt3);
+
+        // if we set date 32 33 or more than 31 it automatically takes that from next month
+        dt3.setDate(40);
+        console.log("new date set is: " + dt3);
+
+        // setDate()
+        dt3.setDate(8);
+        // setMinutes()
+        dt3.setMinutes(40);
+        console.log("new date set by Minutes is: " + dt3);
+
+        d4 = Date.now();
+        console.log("difference from " + dt + "is: " + d4);
+
+        // display date time 
+        setInterval(updateTime, 1000);
+
+        function updateTime() {
+            time.innerHTML = new Date();
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation & Keyframes</title>
+</head>
+<style>
+    * {
+        color: white;
+    }
+    
+    .home-button {
+        color: white;
+        text-decoration: none;
+    }
+    
+    header {
+        display: inline-flex;
+        margin: 5px 5px;
+        padding: 2px 2px;
+        background-color: darkcyan;
+        box-shadow: -2px -2px rgb(60, 63, 63);
+    }
+    
+    .container {
+        display: flex;
+        background-color: rgb(188, 228, 44);
+        height: auto;
+    }
+    
+    .box {
+        display: flex;
+        margin: 2px 2px;
+        border: 5px solid rgb(89, 8, 65)
+    }
+    
+    #box1 {
+        background-color: green;
+        width: 400px;
+        height: 250px;
+        position: relative;
+        animation-name: anurag1;
+        animation-duration: 4s;
+        animation-iteration-count: 4;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-in;
+        animation-direction: reverse;
+    }
+    
+    #box2 {
+        background-color: green;
+        width: 400px;
+        height: 250px;
+        position: relative;
+        animation-name: anurag1;
+        animation-duration: 4s;
+        animation-iteration-count: 4;
+        animation-fill-mode: alternate;
+        animation-timing-function: ease-out;
+        animation-direction: alternate;
+    }
+    
+    #box3 {
+        background-color: green;
+        width: 400px;
+        height: 250px;
+        position: relative;
+        animation-name: anurag2;
+        animation-duration: 8s;
+        animation-iteration-count: 4;
+        animation-fill-mode: alternate;
+        animation-timing-function: ease-in-out;
+        animation-direction: reverse;
+    }
+    
+    @keyframes anurag2 {
+        0% {
+            top: 0px;
+            left: 0px;
+        }
+        25% {
+            top: 250px;
+            left: 0px;
+        }
+        75% {
+            top: 250px;
+            left: 250px;
+        }
+        100% {
+            top: 0px;
+            left: 250px;
+        }
+    }
+    
+    @keyframes anurag1 {
+        from {
+            width: 200px;
+        }
+        to {
+            width: 400px;
+        }
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+    <div class="container">
+        <div class="box" id="box1">
+            <h2>Box 1</h2>
+            <ul>
+                <details>
+                    <summary>Open to see the notes</summary>
+
+
+                    <li><b style="color: aqua;"></b>Showing @keyframes{}</b> use to define the animation .</li>
+                    <li><b style="color: aqua;">animation-name: anurag1;</b> to give animation a name.</li>
+                    <li><b style="color: aqua;">animation-duration: 2s;</b> to give duration of animation.</li>
+                    <li><b style="color: aqua;"> animation-iteration-count: 3;</b> animation count , animation count can also be set to <b>"infinite"</b>.</li>
+                    <li><b style="color: aqua;"> animation-fill-mode: forwards;</b> makes the property of animation stay after completion.</li>
+                    <li><b style="color: aqua;">  animation-timing-function: ease-in;</b> makes the animation start slowly.</li>
+                    <li><b style="color: aqua;">  animation-direction: reverse</b></li>
+                </details>
+            </ul>
+
+        </div>
+        <div class="box" id="box2">
+            <h2>Box 2</h2>
+            <ul>
+                <details>
+                    <summary>Open to see the notes</summary>
+
+
+                    <li><b style="color: aqua;"></b>Showing @keyframes{}</b> use to define the animation .</li>
+                    <li><b style="color: aqua;">animation-name: anurag1;</b> to give animation a name.</li>
+                    <li><b style="color: aqua;">animation-duration: 2s;</b> to give duration of animation.</li>
+                    <li><b style="color: aqua;"> animation-iteration-count: 3;</b> animation count , animation count can also be set to <b>"infinite"</b>.</li>
+                    <li><b style="color: aqua;">  animation-timing-function: ease-out;</b> makes the animation ends slowly.</li>
+                    <li><b style="color: aqua;">  animation-direction: alternate</b></li>
+                </details>
+
+            </ul>
+
+        </div>
+        <br>
+        <div class="box" id="box3">
+            <h2>Box 3</h2>
+            <ul>
+                <details>
+                    <summary>Open to see the notes</summary>
+
+
+                    <li><b style="color: aqua;"></b>Showing @keyframes{}</b> use to define the animation .</li>
+                    <li><b style="color: aqua;">animation-name: anurag1;</b> to give animation a name.</li>
+                    <li><b style="color: aqua;">animation-duration: 2s;</b> to give duration of animation.</li>
+                    <li><b style="color: aqua;"> animation-iteration-count: 3;</b> animation count , animation count can also be set to <b>"infinite"</b>.</li>
+                    <li><b style="color: aqua;">  animation-timing-function: ease-out;</b> makes the animation ends slowly.</li>
+                    <li><b style="color: aqua;">  animation-direction: alternate-reverse</b></li>
+                </details>{}
+
+            </ul>
+
+        </div>
+    </div>
+</body>
+
+</html>

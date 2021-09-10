@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node JS | Linked from index.js</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ''content content content content';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'div div div div' 'code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(70, 156, 182);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    h1 {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="home-button" href="/home">Home</a> </li>
+                <li><a href="./about.html">About</a> </li>
+                <li><a href="./services.html">Services</a> </li>
+                <li><a href="./contact.html">Contact</a> </li>
+                <div class="search">
+                    <input type="text" name="search" id="search" class="search" placeholder="search this website">
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>Node JS | Linked from index.js</h1>
+            </div>
+        </div>
+        <section class="code">
+            <br>const http = require('http');
+            <br>const fs = require('fs');
+            <br>
+            <br>const hostname = '127.0.0.1';
+            <br>const port = 3500;
+            <br>const homepage = fs.readFileSync('../index.html');
+            <br>const about = fs.readFileSync('./about.html');
+            <br>const services = fs.readFileSync('./services.html');
+            <br>const contact = fs.readFileSync('./contact.html');
+            <br>
+            <br>const server = http.createServer((req, res) => {
+            <br> console.log(req.url);
+            <br> url = req.url;
+            <br>
+            <br> res.statusCode = 200;
+            <br> res.setHeader('Content-Type', 'text/html');
+            <br> if ((url == '/') || (url = '/home')) {
+            <br> res.end(homepage);
+            <br> } else if (url == '/about') {
+            <br> res.end(about);
+            <br> } else if (url == '/services') {
+            <br> res.end(services);
+            <br> } else if (url == '/contact') {
+            <br> res.end(contact);
+            <br> } else {
+            <br> res.statusCode = 404;
+            <br> res.end("
+            <h1>404 not found</h1>");
+            <br> }
+            <br>
+            <br>});
+            <br>
+            <br>server.listen(port, hostname, () => {
+            <br> console.log(`Server running at http://${hostname}:${port}/`);
+            <br>});
+
+        </section>
+        <section class="output">
+
+        </section>
+        <section id="content">
+
+        </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------------------------------------------JavaScript ------------------------------------------->
+    <script src="./tute67/index.js"></script>
+    <!-- -----------------------------------------------------------JavaScript -------------------------------------    ------>
+
+</body>
+
+</html>

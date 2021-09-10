@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript | Strings</title>
+</head>
+<!-- -----------------------------------------------------------CSS Style------------------------------------------ -->
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'div div div div' 'code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(70, 156, 182);
+        padding: 10px;
+        align-content: center;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    h1 {
+        text-align: center;
+    }
+</style>
+<!-- -----------------------------------------------------------CSS Style------------------------------------------ -->
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial | Strings and String Methods</h1>
+            </div>
+        </div>
+        <section class="code">
+            <h3>INPUTS</h3>
+            <br>var string1 = "Methods ";
+            <br>var string2 = "that's the way to use quotes and double quotes";
+            <br>var name = "Anurag";
+            <br>var channel1 = "CodeWithHarry";
+            <br>var message = (" is a good boy.");
+            <br>var temp = `${name} is a nice person and he has a tutorial called $<br>{channel1}`;
+            <br>console.log("string1 is : " + string1);
+            <br>console.log("string2 is : " + string2);
+            <br>console.log(message);
+            <br>console.log(string1 + name + message);
+            <br>console.log(temp);
+            <br>var len = name.length;
+            <br>console.log(`Length of name is ${len}`);
+            <br>console.log("hello world \n Anurag \tuse of escape sequence")
+            <br>document.getElementById('content').innerHTML = " &lth1&gtconsole on document output&lt/h1&gt "
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+            <br> string1 is : Methods
+            <br> tute49.html:121 string2 is : that's the way to use quotes and double quotes
+            <br> tute49.html:122 is a good boy.
+            <br> tute49.html:123 Methods Anurag is a good boy.
+            <br> tute49.html:124 Anurag is a nice person and he has a tutorial called <br> CodeWithHarry
+            <br> tute49.html:126 Length of name is 6
+            <br> tute49.html:127 hello world
+            <br> Anurag use of escape sequence
+        </section>
+        <section id="content"> </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------------------------------------------JavaScript ------------------------------------------->
+    <script>
+        var string1 = "Methods ";
+        var string2 = "that's the way to use quotes and double quotes";
+        var name = "Anurag";
+        var channel1 = "CodeWithHarry";
+        var message = (" is a good boy.");
+        var temp = `${name} is a nice person and he has a tutorial called ${channel1}`;
+        console.log("string1 is : " + string1);
+        console.log("string2 is : " + string2);
+        console.log(message);
+        console.log(string1 + name + message);
+        console.log(temp);
+        var len = name.length;
+        console.log(`Length of name is ${len}`);
+        console.log("hello world \n Anurag \tuse of escape sequence");
+        document.getElementById('content').innerHTML = "<h1>console on document output</h1> "
+    </script>
+    <!-- -----------------------------------------------------------JavaScript ------------------------------------------->
+</body>
+
+</html>

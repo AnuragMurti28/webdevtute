@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Elements</title>
+</head>
+<!-- Javascript -------------->
+<script>
+    var a = 78;
+    var b = "Anurag";
+    c = 34.5;
+    c = -c;
+    console.log(c);
+
+    /*Binary Operators*/
+
+
+    //Arithmetic Operators//
+    var num1 = 10;
+    var num2 = 4;
+    console.log(num1);
+    console.log(num2);
+    console.log("The value of num1 +num2 is " + (num1 + num2));
+    console.log("The value of num1 +num2 is " + (num1 - num2));
+    console.log("The value of num1 +num2 is " + (num1 * num2));
+    console.log("The value of num1 +num2 is " + (num1 / num2));
+    console.log("The value of num1 +num2 is " + (num1 ** num2));
+    console.log("The value of num1 ++ " + (num1++));
+    console.log("Now num1 is " + (num1));
+    console.log("The value of ++ num1 is " + (++num1));
+    console.log("The value of num2-- is " + (num2--));
+    console.log("Now num2 is " + (num2));
+    console.log("The value of --num2 is " + (--num2));
+</script>
+<!-- CSS------------------ -->
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header' 'main main main main';
+    }
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    
+    .notes {
+        background-color: darkgray;
+        grid-area: main;
+        padding: 5px;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header class="home">
+        <nav class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- header -->
+    <main class="notes">
+        <h1>Variable ,datatypes and operators in JavaScripts</h1>
+        <div class="content">
+            <h2>Operators in JavaScripts</h2>
+            1. Unary operator - It has single Operand <br> Examples for unary operator<br> c = 34.5; <br> c = -c;<br> console.log(c); <br>2. Binary Operator - It has one operand<br>
+        </div>
+        <hr>
+        <div class="content">
+            //Airthematic Operators//<br> console.log("The value of num1 +num2 is " + (num1 + num2)); : 12<br> console.log("The value of num1 +num2 is " + (num1 - num2)); :8<br> console.log("The value of num1 +num2 is " + (num1 * num2)); :20<br> console.log("The
+            value of num1 +num2 is " + (num1 / num2)); :5<br> console.log("The value of num1 +num2 is " + (num1 ** num2)); :100
+            <br>console.log("The value of num1 ++ " + (num1++));
+            <br>console.log("The value of ++ num1 " + (++num1));
+            <br>console.log("The value of num2-- is " + (num2--));
+            <br>console.log("Now num2 is " + (num2));
+            <br>console.log("The value of --num2 is " + (--num2));
+
+        </div>
+    </main>
+
+</body>
+
+</html>
+
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HTML Semantic Elements</title>
+    <meta name="title" content="This is the first html tutorial">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This is html tutorial">
+    <meta name="keyword" content="html, html tutorials, web developement">
+    <meta name="robot-" content="NOINDEX, NOFOLLOW">
+    <!-- this is how we add external stylesheet -->
+    <link rel="stylesheet" href="index.css ">
+    <!-- this is how we add external javascript-->
+    <script src="index.js"></script>
+    <style>
+        #firstpara {
+            background-color: brown;
+            color: antiquewhite;
+            height: auto;
+            width: 455px;
+            border-width: 4px;
+            border-style: double;
+            border-color: bisque;
+            border-radius: 150px;
+        }
+        
+        #secondpara {
+            background-color: brown;
+            color: antiquewhite;
+            height: auto;
+            width: 455px;
+            border-top: 5px groove violet;
+            border-right: 5px groove rgb(38, 18, 92);
+            border-bottom: 5px groove rgb(96, 173, 23);
+            border-left: 5px groove rgb(190, 36, 36);
+            border-top-left-radius: 5px;
+        }
+        
+        #thirdpara {
+            color: black;
+            height: 500px;
+            width: auto;
+            background-image: url('/images/signature.jpg');
+            border: 2px green groove;
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="parallax">
+        <!-- header -->
+        <header>
+            <a class="home-button" href="index.html">home</a>
+        </header>
+        <!-- header -->
+
+        <h1 style="border: 2px solid white;">&lth1&gt This is sample website created with practicing basics HTML CSS from tutorial
+        </h1>
+        <h2 style="border: 2px solid black">Height, width, borders and backgrounds</h2>
+
+        <p>This is tutorial for CSS setting Height, width, borders and backgrounds </p>
+        <p id="firstpara">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ex, laudantium. background-color: brown; color: antiquewhite; height: 100px; width: 455px; border-width: 4px; border-style: double; border-color: bisque;border-radius: 100px;
+        </p>
+
+        <h2>This is second heading</h2>
+        <p id="secondpara">this is second para showing the border attributes setup individually for top right bottom and left. #secondpara { background-color: brown; color: antiquewhite; height: 100px; width: 455px; border-top: 5px groove violet; border-right: 5px groove
+            rgb(38, 18, 92); border-bottom: 5px groove rgb(96, 173, 23); border-left: 5px groove rgb(190, 36, 36); }
+        </p>
+
+        <h2>This is Third Paragraph</h2>
+        <p id="thirdpara">This is third para is used to show background image attributes like background-image, baackground-repeat , backgrounnd-norepeat <br>#thirdpara { color: black; height: 500px; width: auto; background-image: url('/images/signature.jpg'); border:
+            2px green groove; background-repeat: no-repeat; background-position: center center; }
+        </p>
+
+    </div>
+
+</body>
+
+</html>

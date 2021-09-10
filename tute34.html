@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Text Shadow</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<style>
+    .container {
+        display: flex;
+    }
+    
+    .card {
+        box-sizing: border-box;
+        border: 2px solid black;
+        padding: 23px 34px;
+        margin: 10px;
+        color: white;
+    }
+    
+    .card h2 {
+        text-shadow: 5px 7px 3px rgb(89, 82, 82);
+    }
+    
+    #card-1 {
+        background-color: rgb(208, 71, 71);
+        box-shadow: 10px 13px rgba(208, 71, 71, 0.433);
+    }
+    
+    #card-2 {
+        background-color: rgb(96, 216, 126);
+        box-shadow: -10px -13px rgba(96, 216, 126, 0.549);
+    }
+    
+    #card-3 {
+        background-color: rgb(87, 119, 165);
+        box-shadow: 10px 13px 10px rgba(87, 119, 165, 0.494);
+    }
+    
+    #card-4 {
+        background-color: rgb(192, 181, 28);
+        box-shadow: 10px 13px 10px 34px rgba(165, 155, 11, 0.481));
+    }
+    
+    #card-5 {
+        background-color: rgb(175, 40, 99);
+        box-shadow: inset 10px 13px 10px 34px rgb(128, 7, 59);
+    }
+    
+    #card-6 {
+        background-color: rgb(233, 75, 17);
+        box-shadow: 15px 18px rgba(10, 189, 10, 0.823), -10px -13px rgb(233, 75, 17), 10px 13px rgba(242, 140, 7, 0.823);
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+    <div class="container">
+        <div class="card" id="card-1">
+            <h2>This is html css course</h2>
+            <p>Box-shadow: 10px 13px rgba(208, 71, 71, 0.433); ,<br> with positive values of box shadow <br>we can see the shadow around two edges of the boxes.
+                <hr> Lorem ipsum dolor sit amet consectetur adipisicing elit.Expedita?</p>
+        </div>
+        <div class="card" id="card-2">
+            <h2>card2</h2>
+            <p> Box-shadow: -10px -13px rgba(96, 216, 126, 0.549);<br> Negative values Box Shadow <br>we can see the shadow around two edges of the boxes.
+                <hr>Lorem ipsum dolor sit amet consectetur adipisicing elit.Expedita?</p>
+        </div>
+        <div class="card" id="card-3">
+            <h2>card3</h2>
+            <p> box-shadow: 10px 13px <b style="color: blue;">10px</b> rgba(87, 119, 165, 0.494);<br> with positive value of box shadow and<b style="color: blue;"> blur radius</b> <br>we can see the shadow around two edges of the boxes and also the blurred
+                shadow because of 10px blur radius value
+                <hr>Lorem ipsum dolor sit amet consectetur adipisicing elit.Expedita?</p>
+        </div>
+        <div class="card" id="card-4">
+            <h2>card4</h2>
+            <p> box-shadow: 10px 13px <b style="color: blue;">10px</b> <b style="color: blue;">34px</b> rgba(87, 119, 165, 0.494);<br> with positive value of box shadow and<b style="color: blue;"> blur radius and spread radius</b> <br>we can see the shadow
+                around two edges of the boxes and also the blurred shadow because of 10px blur radius value
+                <hr>Lorem ipsum dolor sit amet consectetur adipisicing elit.Expedita?</p>
+        </div>
+        <div class="card" id="card-5">
+            <h2>card5 - box shadow inside the box</h2>
+            <p> box-shadow: inset 10px 13px <b style="color: blue;">10px</b> <b style="color: blue;">34px</b> rgba(87, 119, 165, 0.494);<br> with positive value of box shadow and<b style="color: blue;"> blur radius and spread radius</b> <br>we can see the
+                shadow around two edges of the boxes and also the blurred shadow because of 10px blur radius value
+                <hr>
+            </p>
+        </div>
+        <div class="card" id="card-6">
+            <h2>card6 - multiple shadow</h2>
+            <p> box-shadow: inset 10px 13px <b style="color: blue;">10px</b> <b style="color: blue;">34px</b> rgba(87, 119, 165, 0.494);<br> with positive value of box shadow and<b style="color: blue;"> blur radius and spread radius</b> <br>we can see the
+                shadow around two edges of the boxes and also the blurred shadow because of 10px blur radius value
+                <hr>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>

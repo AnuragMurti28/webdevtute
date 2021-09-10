@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetInterval | setTimeout</title>
+
+</head>
+<!-- style tag -->
+<style>
+    body {
+        margin: 0;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'header header header header''notes notes notes notes ';
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .home {
+        background-color: darkcyan;
+        grid-area: header;
+        padding: 5px;
+    }
+    
+    .navbar,
+    .navbar,
+    ul {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navbar>ul {
+        display: flex;
+    }
+    
+    .navigation>a {
+        padding: 10px;
+    }
+    
+    .navigation>a:hover {
+        cursor: pointer;
+    }
+    
+    .navigation,
+    .navigation>a {
+        list-style: none;
+        text-decoration: none;
+    }
+    /*////////////////////////////////////////Navigation Bar////////////////////////////////////*/
+    
+    .notes {
+        display: grid;
+        grid-template-areas: 'main main main main''div div div div''code code output output''content content content content';
+        background-color: darkgray;
+        grid-area: notes;
+        padding: 5px;
+        grid-gap: 10px
+    }
+    
+    .heading {
+        background-color: rgb(143, 137, 121);
+        grid-area: div;
+        padding: 5px;
+    }
+    
+    .code {
+        grid-area: code;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    .output {
+        grid-area: output;
+        align-content: center;
+        grid-gap: 10px;
+        background-color: rosybrown;
+        padding: 10px;
+    }
+    
+    #content {
+        grid-area: content;
+        grid-gap: 10px;
+        background-color: rgb(31, 117, 143);
+        padding: 10px;
+        align-content: center;
+        text-align: center;
+    }
+    
+    #main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-area: main;
+        grid-gap: 10px;
+        background-color: rgb(213, 71, 71);
+        padding: 10px;
+    }
+    /*/////////////////////utility CSS classes /////////////////////////////*/
+    
+    #main li {
+        text-decoration: none;
+        list-style-type: none;
+        padding: 10px;
+        margin: 2px;
+    }
+    
+    h1 {
+        text-align: center;
+    }
+    
+    .outputimage {
+        height: 250px;
+        width: 500px;
+        padding: 2px;
+        margin: 2px;
+    }
+    
+    #btn {
+        padding: 10px;
+        background-color: rgb(228, 134, 33);
+        border: 4px 4px groove rgba(141, 115, 10, 0.994);
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+    }
+</style>
+
+
+<body>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <header class="home">
+        <nav id="nav" class="navbar">
+            <ul>
+                <li class="navigation"><a href="index.html">Home</a></li>
+                <li class="navigation"><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- --------------------------------------------------------header-------------------------------------------- -->
+    <!-- -------------------Notes---------------------------- -->
+    <div class="notes">
+        <div class="heading">
+            <div class="row">
+                <h1>This is JavaScript Tutorial |SetInterval | setTimeout</h1>
+            </div>
+        </div>
+        <div id="main" class="container">
+            Time now is <span id="time"></span>
+        </div>
+        <section class="code">
+            <h3>INPUTS</h3>
+            <p> <br>// setTimeout --> Allows us to run the function once after the interval of time
+                <br>// setTimeout --> Allows us to run the function repeatedly after the interval of time,
+                <br>// setTimeout --> multiple arguments can be passed</p>
+
+            <br>function greet(name, byeText) {
+            <br> console.log("Hello Good Morning " + name + " " + byeText);
+            <br>
+            <br>}
+            <br>timeOut = setTimeout(greet, 5000, "Anurag", "have a nice day")<br>;
+            <br>console.log(timeOut);
+            <br>clearTimeout(timeOut);
+            <br>// setTimeout returns timeOut ID
+            <br>
+            <br>// clearTimeout(timeOut);
+            <br>// this stops clear the setTimeout ID
+            <br>
+            <br>// intervalID = setInterval(greet, 1000, "Anurag", " have a <br>nice day ");
+            <br>// clearInterval(intervalID);
+            <br>function displayTime() {
+            <br> time = new Date();
+            <br> console.log(time);
+            <br> document.getElementById('time').innerHTML = time;
+            <br>} setInterval(displayTime, 1000);
+        </section>
+        <section class="output">
+            <h3>OUTPUTS</h3>
+            <img class="outputimage" src="images/tute58.PNG" alt="console output tutorial 58.">
+        </section>
+        <section id="content">
+
+
+        </section>
+    </div>
+    <!-- -------------------Notes---------------------------- -->
+
+
+
+    <!-- -----------------------JavaScript ----------------------------------------- -->
+    <script>
+        console.log("This is tutorial 58");
+        // setTimeout --> Allows us to run the function once after the interval of time
+        // setTimeout --> Allows us to run the function repeatedly after the interval of time,
+        // setTimeout --> multiple arguments can be passed
+
+        function greet(name, byeText) {
+            console.log("Hello Good Morning " + name + " " + byeText);
+
+        }
+        timeOut = setTimeout(greet, 5000, "Anurag", "have a nice day");
+        console.log(timeOut);
+        clearTimeout(timeOut);
+        // setTimeout returns timeOut ID
+
+        // clearTimeout(timeOut);
+        // this stops clear the setTimeout ID
+
+        // intervalID = setInterval(greet, 1000, "Anurag", " have a nice day ");
+        // clearInterval(intervalID);
+        function displayTime() {
+            time = new Date();
+            console.log(time);
+            document.getElementById('time').innerHTML = time;
+        }
+        setInterval(displayTime, 1000);
+    </script>
+
+</body>
+
+</html>

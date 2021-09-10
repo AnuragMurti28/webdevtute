@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grids & media queries</title>
+</head>
+<style>
+    .container1 {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-areas: 'navbar navbar navbar navbar''section section section aside''footer footer footer footer';
+    }
+    
+    @media only screen and (max-width:300px) {
+        body {
+            background-color: cyan;
+        }
+        .container1 {
+            grid-template-areas: 'navbar navbar navbar navbar''section section section section''aside aside aside aside''footer footer footer footer';
+        }
+        aside {
+            display: none;
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    @media only screen and (min-width:300px) and (max-width:500px) {
+        body {
+            background-color: blueviolet;
+        }
+        .container1 {
+            grid-template-areas: 'navbar navbar navbar navbar''section section section section''aside aside aside aside''footer footer footer footer';
+        }
+        aside {
+            display: none;
+        }
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    @media (min-width:500px) and (max-width:800px) {
+        body {
+            background-color: rgb(209, 199, 49);
+        }
+        .container1 {
+            grid-template-areas: 'navbar navbar navbar navbar''section section section section''aside aside aside aside''footer footer footer footer';
+        }
+    }
+    
+    @media (min-width:800px) {
+        body {
+            background-color: rgb(189, 105, 109);
+        }
+    }
+    
+    .bdr {
+        border: 2px solid black;
+        padding: 10px 23px;
+        background-color: wheat;
+    }
+    
+    nav {
+        grid-area: navbar;
+    }
+    /*======================SECTION========================*/
+    
+    section {
+        grid-area: section;
+    }
+    /*======================ASIDE==========================*/
+    
+    aside {
+        grid-area: aside;
+    }
+    
+    footer {
+        grid-area: footer;
+        text-align: center;
+    }
+    
+    span {
+        display: block;
+        text-align: center;
+    }
+    
+    .important {
+        color: rgb(36, 124, 201);
+    }
+    
+    details:hover {
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!-- header -->
+    <header>
+        <a class="home-button" href="index.html">home</a>
+    </header>
+    <!-- header -->
+    <div class="container1">
+        <nav class="bdr">
+            <span>Home</span>
+            <span>About</span>
+            <span>Services</span>
+            <span>Contact</span>
+
+        </nav>
+        <section class="bdr">
+            <h2>Learn CSS in Hindi</h2>
+            <!-- ===================================================Main Content Notes==================================================== -->
+            <details class="important">
+                .container1 { display: grid; grid-gap: 1rem; grid-template-areas: 'navbar navbar navbar navbar''section section section aside''footer footer footer footer'; }
+                <br> @media only screen and (max-width:300px) { body { background-color: cyan; }
+                <br> .container1 { grid-template-areas: 'navbar navbar navbar navbar''section section section section''aside aside aside aside''footer footer footer footer'; }
+                <br> aside { display: none; }
+                <br> span { display: block; text-align: center; } }
+                <br> @media only screen and (min-width:300px) and (max-width:500px) { body { background-color: blueviolet; }
+                <br> .container1 { grid-template-areas: 'navbar navbar navbar navbar''section section section section''aside aside aside aside''footer footer footer footer'; }
+                <br> aside { display: none; }
+                <br> span { display: block; text-align: center; }
+                <br> }
+                <br> @media (min-width:500px) and (max-width:800px) { body { background-color: rgb(209, 199, 49); }
+                <br> .container1 { grid-template-areas: 'navbar navbar navbar navbar''section section section section''aside aside aside aside''footer footer footer footer'; }
+                <br> }
+
+                <br> @media (min-width:800px) { body { background-color: rgb(189, 105, 109); }
+                <br> }
+                <br> .bdr { border: 2px solid black; padding: 10px 23px; background-color: wheat; }
+                <br> nav { grid-area: navbar; }
+                <br> /*======================SECTION========================*/ section { grid-area: section; }
+                <br> /*======================ASIDE==========================*/
+                <br> aside { grid-area: aside; }
+                <br> footer { grid-area: footer; text-align: center; }
+                <br> span { display: block; text-align: center; }
+                <br> .important { color: rgb(36, 124, 201); }
+                <br>
+            </details>
+            <!-- ===================================================Main Content Notes==================================================== -->
+        </section>
+        <aside class="bdr">
+            <h1>More about us</h1>
+        </aside>
+        <footer class="bdr">copyright codewithanurag</footer>
+    </div>
+</body>
+
+</html>
